@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
 	public float horizDegrees = 45;
 	public float vertDegrees = 45;
 	
-	
+	public int bananaCount = 0;
 
 	public float vertAccel = 1;
 	public float horizAccel = 1;
@@ -24,8 +24,8 @@ public class PlayerController : MonoBehaviour
 	{
 		
 		
-		float h = horizDegrees * horizAccel *Input.GetAxis("Horizontal");
-		float v = vertDegrees * vertAccel *Input.GetAxis("Vertical");
+		float h = horizDegrees * horizAccel * Input.GetAxis("Horizontal");
+		float v = vertDegrees * vertAccel * Input.GetAxis("Vertical");
 
 		transform.eulerAngles = new Vector3(-v, 0, h);
 		//transform.RotateAround(Vector3.zero, new Vector3(v, 0f, h), vertDegrees *Time.deltaTime );
@@ -51,7 +51,15 @@ public class PlayerController : MonoBehaviour
 
 
 	}
-
+	
+	private void OnTriggerEnter(Collider other)
+	{
+		if (other.gameObject.tag == "Banana")
+		{
+			Destroy(other.gameObject);
+			bananaCount++;
+		}
+	}
 
 	/*void AccelInput()
 	{

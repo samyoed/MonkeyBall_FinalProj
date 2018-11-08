@@ -17,12 +17,4 @@ public class bananaRotater : MonoBehaviour {
 	{
 		transform.Rotate(0, rotSpeed * Time.deltaTime, 0);
 	}
-
-	private void OnCollisionEnter(Collision other)
-	{
-		if (other.gameObject.tag == "Player")
-		{
-			Destroy(this.gameObject);
-		}
-	}
 }

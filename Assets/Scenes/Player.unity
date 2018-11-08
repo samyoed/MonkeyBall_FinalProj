@@ -304,9 +304,9 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 212038946}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0.3
-  m_AngularDrag: 0.05
+  m_Mass: 0.1
+  m_Drag: 1
+  m_AngularDrag: 0.5
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -394,8 +394,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 591ae90c5cb8f2e45954eab188335b88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizDegrees: 30
-  vertDegrees: 30
+  horizDegrees: 15
+  vertDegrees: 15
+  bananaCount: 0
   vertAccel: 1
   horizAccel: 1
 --- !u!1 &436863418
@@ -588,6 +589,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizDegrees: 45
   vertDegrees: 45
+  bananaCount: 0
   vertAccel: 1
   horizAccel: 1
 --- !u!114 &534669907
@@ -2465,7 +2467,7 @@ GameObject:
   - component: {fileID: 1463505316}
   m_Layer: 0
   m_Name: tempBanana
-  m_TagString: Untagged
+  m_TagString: Banana
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3331,7 +3333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e337b619db27987408b191e2c8492de9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravMult: 20
+  gravMult: 24
 --- !u!1 &2119504613
 GameObject:
   m_ObjectHideFlags: 0
