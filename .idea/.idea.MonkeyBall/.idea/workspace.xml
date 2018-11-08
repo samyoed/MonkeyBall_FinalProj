@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="69f5ce07-222b-4e3d-8b79-1841dc36bbbf" name="Default Changelist" comment="" />
+    <list default="true" id="69f5ce07-222b-4e3d-8b79-1841dc36bbbf" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MonkeyBall/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MonkeyBall/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Cindy/gameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cindy/gameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Cindy/pauseMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cindy/pauseMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,24 +20,116 @@
     <session id="-776647246">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.16" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="cs" value="676" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="C#" value="676" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="cs" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="C#" value="3" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/gameManager.cs">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/Assets/Cindy/gameManager.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="86">
+              <caret line="35" selection-start-line="35" selection-end-line="35" />
+              <folding>
+                <marker date="1541697119418" expanded="true" signature="6:135" ph="..." />
+                <marker date="1541697119418" expanded="true" signature="177:1265" ph="{...}" />
+                <marker date="1541697119418" expanded="true" signature="480:529" ph="{...}" />
+                <marker date="1541697119418" expanded="true" signature="584:1263" ph="{...}" />
+                <marker date="1541697119418" expanded="true" signature="624:683" ph="{...}" />
+                <marker date="1541697119418" expanded="true" signature="718:796" ph="{...}" />
+                <marker date="1541697119418" expanded="true" signature="832:905" ph="{...}" />
+                <marker date="1541697119418" expanded="true" signature="937:964" ph="{...}" />
+                <marker date="1541697119418" expanded="true" signature="1016:1043" ph="{...}" />
+                <marker date="1541697119418" expanded="true" signature="1123:1149" ph="{...}" />
+                <marker date="1541697119418" expanded="true" signature="1172:1257" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Cindy/mainMenu.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+              <folding>
+                <marker date="1541694714351" expanded="true" signature="6:113" ph="..." />
+                <marker date="1541694714351" expanded="true" signature="153:610" ph="{...}" />
+                <marker date="1541694714351" expanded="true" signature="281:435" ph="{...}" />
+                <marker date="1541694714351" expanded="true" signature="490:608" ph="{...}" />
+                <marker date="1541694714351" expanded="true" signature="559:602" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Cindy/pauseMenu.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="990">
+              <caret line="71" column="9" selection-start-line="71" selection-start-column="9" selection-end-line="71" selection-end-column="9" />
+              <folding>
+                <marker date="1541697191063" expanded="false" signature="6:151" ph="..." />
+                <marker date="1541697191063" expanded="true" signature="191:1389" ph="{...}" />
+                <marker date="1541697191063" expanded="true" signature="374:483" ph="{...}" />
+                <marker date="1541697191063" expanded="true" signature="404:435" ph="{...}" />
+                <marker date="1541697191063" expanded="true" signature="442:480" ph="{...}" />
+                <marker date="1541697191063" expanded="true" signature="500:529" ph="{...}" />
+                <marker date="1541697191063" expanded="true" signature="584:1387" ph="{...}" />
+                <marker date="1541697191063" expanded="true" signature="609:766" ph="{...}" />
+                <marker date="1541697191063" expanded="true" signature="796:953" ph="{...}" />
+                <marker date="1541697191063" expanded="true" signature="1014:1042" ph="{...}" />
+                <marker date="1541697191063" expanded="true" signature="1103:1132" ph="{...}" />
+                <marker date="1541697191063" expanded="true" signature="1188:1252" ph="{...}" />
+                <marker date="1541697191063" expanded="true" signature="1309:1380" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Cindy/pauseMenu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Cindy/gameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Cindy/mainMenu.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Cindy/mainMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Cindy/gameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Cindy/pauseMenu.cs" />
+      </list>
+    </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -38,7 +138,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="285" />
+    <option name="x" value="370" />
+    <option name="y" value="25" />
     <option name="width" value="1638" />
     <option name="height" value="1401" />
   </component>
@@ -47,13 +148,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="FileSystemExplorer" />
       <pane id="SolutionExplorer">
         <option name="show-all-files" value="false" />
       </pane>
       <pane id="UnityExplorer">
         <option name="show-hidden-items" value="false" />
       </pane>
-      <pane id="FileSystemExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -73,6 +174,22 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Attach to Unity Editor.Attach to Unity Editor" />
+      <item itemvalue="Attach to Unity Editor.Attach to Unity Editor &amp; Play" />
+    </list>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -84,25 +201,29 @@
       <option name="presentableId" value="Default" />
       <updated>1541693239436</updated>
       <workItem from="1541693248224" duration="22000" />
+      <workItem from="1541694117558" duration="3220000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22000" />
+    <option name="totallyTimeSpent" value="3242000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="190" y="0" width="1092" height="934" extended-state="0" />
+    <frame x="247" y="17" width="1092" height="934" extended-state="0" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25484496" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="NuGet" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Unit Tests" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Unity" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -110,18 +231,25 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Errors In Solution" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Unit Tests Coverage" />
+      <window_info anchor="bottom" id="NuGet" order="7" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Unit Tests" order="11" />
+      <window_info anchor="bottom" id="Terminal" order="12" />
+      <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Errors In Solution" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Unit Tests Coverage" order="5" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -139,6 +267,62 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/gameManager.cs">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Cindy/mainMenu.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+          <folding>
+            <marker date="1541694714351" expanded="true" signature="6:113" ph="..." />
+            <marker date="1541694714351" expanded="true" signature="153:610" ph="{...}" />
+            <marker date="1541694714351" expanded="true" signature="281:435" ph="{...}" />
+            <marker date="1541694714351" expanded="true" signature="490:608" ph="{...}" />
+            <marker date="1541694714351" expanded="true" signature="559:602" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Cindy/pauseMenu.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="71" column="9" selection-start-line="71" selection-start-column="9" selection-end-line="71" selection-end-column="9" />
+          <folding>
+            <marker date="1541697191063" expanded="false" signature="6:151" ph="..." />
+            <marker date="1541697191063" expanded="true" signature="191:1389" ph="{...}" />
+            <marker date="1541697191063" expanded="true" signature="374:483" ph="{...}" />
+            <marker date="1541697191063" expanded="true" signature="404:435" ph="{...}" />
+            <marker date="1541697191063" expanded="true" signature="442:480" ph="{...}" />
+            <marker date="1541697191063" expanded="true" signature="500:529" ph="{...}" />
+            <marker date="1541697191063" expanded="true" signature="584:1387" ph="{...}" />
+            <marker date="1541697191063" expanded="true" signature="609:766" ph="{...}" />
+            <marker date="1541697191063" expanded="true" signature="796:953" ph="{...}" />
+            <marker date="1541697191063" expanded="true" signature="1014:1042" ph="{...}" />
+            <marker date="1541697191063" expanded="true" signature="1103:1132" ph="{...}" />
+            <marker date="1541697191063" expanded="true" signature="1188:1252" ph="{...}" />
+            <marker date="1541697191063" expanded="true" signature="1309:1380" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Cindy/gameManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+          <folding>
+            <marker date="1541697119418" expanded="true" signature="6:135" ph="..." />
+            <marker date="1541697119418" expanded="true" signature="177:1265" ph="{...}" />
+            <marker date="1541697119418" expanded="true" signature="480:529" ph="{...}" />
+            <marker date="1541697119418" expanded="true" signature="584:1263" ph="{...}" />
+            <marker date="1541697119418" expanded="true" signature="624:683" ph="{...}" />
+            <marker date="1541697119418" expanded="true" signature="718:796" ph="{...}" />
+            <marker date="1541697119418" expanded="true" signature="832:905" ph="{...}" />
+            <marker date="1541697119418" expanded="true" signature="937:964" ph="{...}" />
+            <marker date="1541697119418" expanded="true" signature="1016:1043" ph="{...}" />
+            <marker date="1541697119418" expanded="true" signature="1123:1149" ph="{...}" />
+            <marker date="1541697119418" expanded="true" signature="1172:1257" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

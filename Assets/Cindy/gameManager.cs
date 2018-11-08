@@ -7,29 +7,69 @@ using UnityEngine.UI;
 public class gameManager : MonoBehaviour
 {
 
-	private Scene currentScene;
-	private Scene mainMenu;
-	private Scene game;
-		
+	public static int score;
+	public static int bananaCounter;
+	public static int lifeCounter;
+	public static int floorCounter;
+	public int speedCounter;
+
+	public Text scoreText;
+	public Text bananaText;
+	public Text floorText;
+	public Text speedText;
+
+	
 	// Use this for initialization
 	void Start () {
-		
-		DontDestroyOnLoad(this.gameObject);
-		
-		currentScene = SceneManager.GetActiveScene();
-		mainMenu = SceneManager.GetSceneByName("Main Menu");
-		game = SceneManager.GetSceneByName("Game");
+				
+		lifeCounter = 3;
+		floorCounter = 1;
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		if (Input.GetKeyDown(KeyCode.Space) && currentScene == mainMenu)
+		
+		if (Input.GetKeyDown(KeyCode.Q))
 		{
-			SceneManager.LoadScene("Game");
-		}		
-		
-		
+			score++;
+			scoreText.text = "SCORE: " + score;
+		}
+		if (Input.GetKeyDown(KeyCode.W))
+		{
+			bananaCounter++;
+			bananaText.text = "BANANAS: " + bananaCounter;
+		}
+
+		if (Input.GetKeyDown(KeyCode.U))
+		{
+			floorCounter++;
+			floorText.text = "Floor: " + floorCounter;
+		}
+
+		if (Input.GetKey(KeyCode.Y))
+		{
+			speedCounter++;
+		}
+		if (!Input.GetKey(KeyCode.Y) && speedCounter > 0)
+		{
+			speedCounter--;
+		}
+		speedText.text = speedCounter + " MPH";
+
+	
+		if (Input.GetKeyDown(KeyCode.T))
+		{
+			lifeCounter--;
+		}
+		if (lifeCounter < 0)
+		{
+			bananaCounter = 0;
+			score = 0;
+
+			SceneManager.LoadScene("Main Menu");
+		}
 		
 	}
 }
