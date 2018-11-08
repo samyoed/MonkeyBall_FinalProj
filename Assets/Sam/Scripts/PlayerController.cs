@@ -10,9 +10,10 @@ public class PlayerController : MonoBehaviour
 	
 	public int bananaCount = 0;
 
-	public float vertAccel = 1;
-	public float horizAccel = 1;
-	
+	private float vertAccelI = 0;
+	public float vertMax = 0;
+	private float horizAccelI = 0;
+	public float horizMax = 0;
 	
 	// Use this for initialization
 	void Start () {
@@ -22,12 +23,22 @@ public class PlayerController : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		
-		
-		float h = horizDegrees * horizAccel * Input.GetAxis("Horizontal");
-		float v = vertDegrees * vertAccel * Input.GetAxis("Vertical");
+		if (Input.GetAxis("Vertical") != 0 && Mathf.Abs(vertAccelI) < vertMax)
+		{
+			vertAccelI += Input.GetAxis("Vertical") * Time.deltaTime * 20;
+		}
+		else vertAccelI = Mathf.MoveTowards(vertAccelI, 0, Time.deltaTime * 8);
 
-		transform.eulerAngles = new Vector3(-v, 0, h);
+		if (Input.GetAxis("Horizontal") != 0 && Mathf.Abs(horizAccelI) < horizMax)
+		{
+			horizAccelI += Input.GetAxis("Horizontal") * Time.deltaTime * 20;
+		}
+		else horizAccelI = Mathf.MoveTowards(horizAccelI, 0, Time.deltaTime * 8);
+
+		//float horiz = horizDegrees * horizAccel * Input.GetAxis("Horizontal");
+		//float vert = vertDegrees * vertAccel * Input.GetAxis("Vertical");
+
+		transform.eulerAngles = new Vector3(-vertAccelI, 0, horizAccelI);
 		//transform.RotateAround(Vector3.zero, new Vector3(v, 0f, h), vertDegrees *Time.deltaTime );
 /*
 		if (!Input.GetButtonDown("Vertical"))
