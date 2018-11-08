@@ -8,6 +8,7 @@
       <e p="Assets" t="Include">
         <e p="Matt" t="Include">
           <e p="bananaRotater.cs" t="Include" />
+          <e p="camControl.cs" t="Include" />
         </e>
         <e p="Sam" t="Include">
           <e p="BackdropMove.cs" t="Include" />

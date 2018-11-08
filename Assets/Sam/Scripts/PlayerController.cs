@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-	public float horizDegrees = 45;
-	public float vertDegrees = 45;
+	public float horizDegrees = 0;
+	public float vertDegrees = 0;
 	
 	public int bananaCount = 0;
 

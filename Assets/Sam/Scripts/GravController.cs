@@ -14,6 +14,6 @@ public class GravController : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
-		Physics.gravity = gravMult *-transform.up;
+		Physics.gravity = gravMult *- transform.up;
 	}
 }
