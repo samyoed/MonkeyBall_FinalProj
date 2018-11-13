@@ -8,11 +8,13 @@
       <e p="Assets" t="Include">
         <e p="Cindy" t="Include">
           <e p="gameManager.cs" t="Include" />
+          <e p="killPlain.cs" t="Include" />
           <e p="mainMenu.cs" t="Include" />
           <e p="pauseMenu.cs" t="Include" />
         </e>
         <e p="Matt" t="Include">
           <e p="bananaRotater.cs" t="Include" />
+          <e p="camControl.cs" t="Include" />
         </e>
         <e p="Sam" t="Include">
           <e p="BackdropMove.cs" t="Include" />

@@ -20,7 +20,7 @@ public class mainMenu : MonoBehaviour {
 	void Update () {
 		if (Input.GetKeyDown(KeyCode.Space) && currentScene == startMenu)
 		{
-			SceneManager.LoadScene("Game");
+			SceneManager.LoadScene("Player");
 		}		
 
 	}

@@ -66,7 +66,7 @@ public class pauseMenu : MonoBehaviour
 		if (Input.GetKey(KeyCode.E) && isPaused != false)
 		{
 			isPaused = false;
-			SceneManager.LoadScene("Game");
+			SceneManager.LoadScene("Player");
 		}
 		if (Input.GetKey(KeyCode.Escape) && isPaused != false)
 		{

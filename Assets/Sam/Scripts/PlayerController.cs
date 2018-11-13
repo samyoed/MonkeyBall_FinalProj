@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -9,20 +10,40 @@ public class PlayerController : MonoBehaviour
 	public float vertDegrees = 0;
 	
 	public int bananaCount = 0;
+	public int scoreCount = 0;
 
 	private float vertAccelI = 0;
 	public float vertMax = 0;
 	private float horizAccelI = 0;
 	public float horizMax = 0;
+
+	public Text bananaText;
+	public Text scoreText;
+	public Text speedText;
+	
+	Vector3 PrevPos; 
+	Vector3 NewPos; 
+	Vector3 ObjVelocity;
 	
 	// Use this for initialization
-	void Start () {
-		
+	void Start ()
+	{
+		bananaText.text = "BANANA: 0/100";
+		scoreText.text = "SCORE: 0";
+		PrevPos = transform.position;
+		NewPos = transform.position;
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
+		
+		speedText.text = Mathf.RoundToInt(Mathf.Abs(ObjVelocity.x + ObjVelocity.z)) + " MPH";
+		
+		NewPos = transform.position; 
+		ObjVelocity = (NewPos - PrevPos) / Time.fixedDeltaTime;  
+		PrevPos = NewPos;  
+		
 		if (Input.GetAxis("Vertical") != 0 && Mathf.Abs(vertAccelI) < vertMax)
 		{
 			vertAccelI += Input.GetAxis("Vertical") * Time.deltaTime * 20;
@@ -69,6 +90,9 @@ public class PlayerController : MonoBehaviour
 		{
 			Destroy(other.gameObject);
 			bananaCount++;
+			scoreCount += 100;
+			bananaText.text = "BANANA: " + bananaCount + "/100";
+			scoreText.text = "SCORE: " + scoreCount;
 		}
 	}
 
