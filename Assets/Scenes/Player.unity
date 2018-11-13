@@ -397,8 +397,8 @@ MonoBehaviour:
   horizDegrees: 15
   vertDegrees: 15
   bananaCount: 0
-  vertAccel: 1
-  horizAccel: 1
+  vertMax: 15
+  horizMax: 15
 --- !u!1 &436863418
 GameObject:
   m_ObjectHideFlags: 0
@@ -591,8 +591,8 @@ MonoBehaviour:
   horizDegrees: 45
   vertDegrees: 45
   bananaCount: 0
-  vertAccel: 1
-  horizAccel: 1
+  vertMax: 0
+  horizMax: 0
 --- !u!114 &534669907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -617,7 +617,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 212038946}
-  camTarget: {fileID: 212038946}
+  camTarget: {fileID: 1342630286}
   turnSpeed: 4
 --- !u!1 &546670542
 GameObject:
@@ -2490,7 +2490,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1342630286}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 212038951}
