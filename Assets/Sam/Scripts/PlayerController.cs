@@ -14,15 +14,22 @@ public class PlayerController : MonoBehaviour
 	public float vertMax = 0;
 	private float horizAccelI = 0;
 	public float horizMax = 0;
+
+	private Rigidbody thisRB;
+	public GameObject camTarget;
+	private float yAngleDir = 0;
 	
 	// Use this for initialization
-	void Start () {
-		
+	void Start ()
+	{
+		thisRB = this.GetComponent<Rigidbody>();
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
+		SetYRotation();
+		
 		if (Input.GetAxis("Vertical") != 0 && Mathf.Abs(vertAccelI) < vertMax)
 		{
 			vertAccelI += Input.GetAxis("Vertical") * Time.deltaTime * 20;
@@ -31,14 +38,16 @@ public class PlayerController : MonoBehaviour
 
 		if (Input.GetAxis("Horizontal") != 0 && Mathf.Abs(horizAccelI) < horizMax)
 		{
-			horizAccelI += Input.GetAxis("Horizontal") * Time.deltaTime * 20;
+			horizAccelI += Input.GetAxis("Horizontal") * Time.deltaTime * 8;
 		}
 		else horizAccelI = Mathf.MoveTowards(horizAccelI, 0, Time.deltaTime * 8);
 
-		//float horiz = horizDegrees * horizAccel * Input.GetAxis("Horizontal");
-		//float vert = vertDegrees * vertAccel * Input.GetAxis("Vertical");
-
-		transform.eulerAngles = new Vector3(-vertAccelI, 0, horizAccelI);
+		
+		transform.eulerAngles = new Vector3(-vertAccelI, yAngleDir, horizAccelI);
+		
+		
+		
+		
 		//transform.RotateAround(Vector3.zero, new Vector3(v, 0f, h), vertDegrees *Time.deltaTime );
 /*
 		if (!Input.GetButtonDown("Vertical"))
@@ -72,51 +81,34 @@ public class PlayerController : MonoBehaviour
 		}
 	}
 
-	/*void AccelInput()
+	private void SetYRotation()		//Determines direction facing of yRot and adjusts appropriately
 	{
-		
-		//Right
-		if (Input.GetAxis("Horizontal") > 0 && horizAccel < horizDegrees)
-		{
-			horizAccel += Time.deltaTime;
-		}
-		else if (horizAccel > 0)
-		{
+		float xVelo = thisRB.velocity.x;
+		float zVelo = thisRB.velocity.z;
 
-			horizAccel -= Time.deltaTime;
-		}
-		
-		//Left
-		if (Input.GetAxis("Horizontal") < 0 && horizAccel > horizDegrees)
+		if (zVelo != 0)		//Avoid NaN Errors
 		{
-			horizAccel -= Time.deltaTime;
-		}
-		else if (horizAccel < 0)
-		{
+			float currentVeloDir = (Mathf.Atan(xVelo / zVelo) * Mathf.Rad2Deg) - 90f;
 
-			horizAccel += Time.deltaTime;
-		}
-		
-		//Forward
-		if (Input.GetAxis("Vertical") > 0 && vertAccel < vertDegrees)
-		{
-			vertAccel += Time.deltaTime;
-		}
-		else if (vertAccel > 0)
-		{
+			if (zVelo > 0)
+			{
+				currentVeloDir = Mathf.Abs(currentVeloDir);
+			}
 
-			vertAccel -= Time.deltaTime;
+			else
+			{
+				currentVeloDir = (Mathf.Atan(-xVelo / zVelo) * Mathf.Rad2Deg) - 90f;
+			}
+				//Debug.Log("angle = " + currentVeloDir);
+			
+			yAngleDir =  -currentVeloDir + 90;
+			camTarget.transform.eulerAngles = new Vector3(this.transform.eulerAngles.x, yAngleDir, this.transform.eulerAngles.z);
+			
+			/*this.transform.eulerAngles = Vector3.MoveTowards(
+					this.transform.eulerAngles,
+					new Vector3(this.transform.eulerAngles.x, currentVeloDir, this.transform.eulerAngles.z), 
+					Time.deltaTime * 18
+				);*/
 		}
-		
-		//Back
-		if (Input.GetAxis("Vertical") < 0 && vertAccel < vertDegrees)
-		{
-			vertAccel -= Time.deltaTime;
-		}
-		else if (vertAccel < 0)
-		{
-
-			vertAccel += Time.deltaTime;
-		}
-	}   */
+	}
 }
