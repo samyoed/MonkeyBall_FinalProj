@@ -289,13 +289,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 350782945}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bec3c1b20ed5cc468fcfa951dcb4c2f, type: 3}
+  m_Script: {fileID: 11500000, guid: deaf6e0d132b3c64d9766af184610d21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPaused: 0
-  score: 0
-  bananasGot: 0
-  monkeyLives: 0
 --- !u!4 &350782947
 Transform:
   m_ObjectHideFlags: 0

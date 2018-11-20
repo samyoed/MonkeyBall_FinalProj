@@ -1,21 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Boo.Lang;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class pauseMenu : MonoBehaviour {
+public class pauseMenu : MonoBehaviour
+{
 
-	public int score;
-	public int bananaCounter;
-	public int lifeCounter;
-	public int floorCounter;
-	public int speedCounter;
-	
-	public Text scoreText;
-	public Text bananaText;
-	public Text floorText;
-	public Text speedText;
+	private static Component gameManager;
 	
 	public Text paused;
 	public Text restart;
@@ -24,12 +17,22 @@ public class pauseMenu : MonoBehaviour {
 	public bool isPaused;
 	
 	// Use this for initialization
+	void Awake()
+	{
+		if (gameManager == null)
+		{
+			gameManager = this;
+		}
+		else
+		{
+			DestroyObject(gameObject);
+		}
+	}
+	
 	void Start ()
 	{
-		DontDestroyOnLoad(this.gameObject);
 		isPaused = false;
-		lifeCounter = 3;
-		floorCounter = 1;
+		
 	}
 	
 	// Update is called once per frame
@@ -63,55 +66,14 @@ public class pauseMenu : MonoBehaviour {
 		if (Input.GetKey(KeyCode.E) && isPaused != false)
 		{
 			isPaused = false;
-			SceneManager.LoadScene("Game");
+			SceneManager.LoadScene("Player");
 		}
 		if (Input.GetKey(KeyCode.Escape) && isPaused != false)
 		{
-			bananaCounter = 0;
-			score = 0;
 			Time.timeScale = 1;
 			SceneManager.LoadScene("Main Menu");
 		}
+
 		
-		if (Input.GetKeyDown(KeyCode.Q))
-		{
-			score++;
-			scoreText.text = "SCORE: " + score;
-		}
-		if (Input.GetKeyDown(KeyCode.W))
-		{
-			bananaCounter++;
-			bananaText.text = "BANANAS: " + bananaCounter;
-		}
-
-		if (Input.GetKeyDown(KeyCode.U))
-		{
-			floorCounter++;
-			floorText.text = "Floor: " + floorCounter;
-		}
-
-		if (Input.GetKey(KeyCode.Y))
-		{
-			speedCounter++;
-		}
-		if (!Input.GetKey(KeyCode.Y) && speedCounter > 0)
-		{
-			speedCounter--;
-		}
-		speedText.text = speedCounter + " MPH";
-
-	
-		if (Input.GetKeyDown(KeyCode.T))
-		{
-			lifeCounter--;
-		}
-		if (lifeCounter < 0)
-		{
-			bananaCounter = 0;
-			score = 0;
-
-			SceneManager.LoadScene("Main Menu");
-		}
-
 	}
 }
