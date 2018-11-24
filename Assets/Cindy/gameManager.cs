@@ -10,7 +10,11 @@ public class gameManager : MonoBehaviour
 	public static int lifeCounter;
 	public static int floorCounter;
 
+	public float timer = 60;
+
 	public Text floorText;
+	public Text timerText;
+	
 	
 	// Use this for initialization
 	void Start () {
@@ -18,7 +22,29 @@ public class gameManager : MonoBehaviour
 		lifeCounter = 3;
 		floorCounter = 1;
 		floorText.text = "Floor: 1";
+		StartCountdownTimer();
 
+	}
+
+	void StartCountdownTimer()
+	{
+		if (timerText != null)
+		{
+			timer = 60;
+			timerText.text = "060:00";
+			InvokeRepeating("UpdateTimer", 0.0f, 0.01667f);
+		}
+	}
+
+	void UpdateTimer()
+	{
+		if (timerText != null)
+		{
+			timer -= Time.deltaTime;
+			string seconds = (timer % 60).ToString("000");
+			string fraction = ((timer * 100) % 100).ToString("00");
+			timerText.text = seconds + ":" + fraction;
+		}
 	}
 	
 	// Update is called once per frame
@@ -42,7 +68,7 @@ public class gameManager : MonoBehaviour
 
 			SceneManager.LoadScene("Main Menu");
 		}
-		
+
 	}
 
 }
