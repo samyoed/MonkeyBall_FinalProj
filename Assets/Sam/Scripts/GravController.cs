@@ -14,5 +14,14 @@ public class GravController : MonoBehaviour
 		
 		//this.transform.eulerAngles = new Vector3(this.transform.eulerAngles.x, camTarget.transform.eulerAngles.y, this.transform.eulerAngles.z);
 		Physics.gravity = gravMult *- transform.up;
+
+		//transform.rotation = new Quaternion(transform.rotation.x, Camera.main.transform.rotation.y, transform.rotation.z, transform.rotation.w);
+		//transform.rotation = new Quaternion(0, Camera.main.transform.rotation.y,0,0);
+
+		
+		
+		
+		
+		
 	}
 }
