@@ -15,7 +15,6 @@ public class gameManager : MonoBehaviour
 	public Text floorText;
 	public Text timerText;
 	
-	
 	// Use this for initialization
 	void Start () {
 				

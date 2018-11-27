@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
 	public float vertDegrees = 0;
 	
 	public int bananaCount = 0;
+	public int scoreCount = 0;
 
 	private float vertAccelI = 0;
 	public float vertMax = 0;
@@ -25,15 +26,33 @@ public class PlayerController : MonoBehaviour
 	public Graphic screenFadeRect;
 	private float fadeAlpha = 0f;
 	
+	public Text bananaText;
+	public Text scoreText;
+	public Text speedText;
+	
+	Vector3 PrevPos; 
+	Vector3 NewPos; 
+	Vector3 ObjVelocity;
+	
 	// Use this for initialization
 	void Start ()
 	{
 		thisRB = this.GetComponent<Rigidbody>();
+		bananaText.text = "BANANA: 0/100";
+		scoreText.text = "SCORE: 0";
+		PrevPos = transform.position;
+		NewPos = transform.position;
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
+		speedText.text = Mathf.RoundToInt(Mathf.Abs(ObjVelocity.x + ObjVelocity.z)) + " MPH";
+		
+		NewPos = transform.position; 
+		ObjVelocity = (NewPos - PrevPos) / Time.fixedDeltaTime;  
+		PrevPos = NewPos;  
+		
 		if (thisRB.velocity.magnitude > 1.5)	//Player yRotation becomes automatic once moving for easier control
 		{
 			SetYRotation();
@@ -75,6 +94,9 @@ public class PlayerController : MonoBehaviour
 		{
 			Destroy(other.gameObject);
 			bananaCount++;
+			scoreCount += 100;
+			bananaText.text = "BANANA: " + bananaCount + "/100";
+			scoreText.text = "SCORE: " + scoreCount;
 		}
 		
 		else if (other.gameObject.tag == "KillPlane")
