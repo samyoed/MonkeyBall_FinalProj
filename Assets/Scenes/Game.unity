@@ -421,6 +421,7 @@ GameObject:
   m_Component:
   - component: {fileID: 301255807}
   - component: {fileID: 301255806}
+  - component: {fileID: 301255808}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -436,18 +437,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 301255805}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0f708a2026c193499cb59f7c921a775, type: 3}
+  m_Script: {fileID: 11500000, guid: c928d060d7bf81c4fb5600c8a88feb38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
-  bananaCounter: 0
-  lifeCounter: 0
-  floorCounter: 0
-  speedCounter: 0
-  scoreText: {fileID: 841325457}
-  bananaText: {fileID: 1957467848}
-  floorText: {fileID: 933656863}
-  speedText: {fileID: 18998345}
   paused: {fileID: 814377487}
   restart: {fileID: 424146026}
   gotoMenu: {fileID: 18998345}
@@ -465,6 +457,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &301255808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 301255805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bec3c1b20ed5cc468fcfa951dcb4c2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedCounter: 0
+  scoreText: {fileID: 841325457}
+  bananaText: {fileID: 1957467848}
+  floorText: {fileID: 933656863}
+  speedText: {fileID: 497341372}
 --- !u!1 &384542622
 GameObject:
   m_ObjectHideFlags: 0
@@ -718,7 +726,7 @@ GameObject:
   - component: {fileID: 497341372}
   m_Layer: 5
   m_Name: MPH
-  m_TagString: Untagged
+  m_TagString: mphUIText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -868,7 +876,7 @@ GameObject:
   - component: {fileID: 841325457}
   m_Layer: 5
   m_Name: Score
-  m_TagString: Untagged
+  m_TagString: scoreUIText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -943,7 +951,7 @@ GameObject:
   - component: {fileID: 933656863}
   m_Layer: 5
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: floorUIText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1018,7 +1026,7 @@ GameObject:
   - component: {fileID: 1957467848}
   m_Layer: 5
   m_Name: Bananas
-  m_TagString: Untagged
+  m_TagString: bananaUIText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
