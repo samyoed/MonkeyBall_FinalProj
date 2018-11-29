@@ -14,19 +14,19 @@ public class WorldScript : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
-		this.transform.rotation = new Quaternion(
+		/*this.transform.rotation = new Quaternion(
 			playerSphereParent.transform.rotation.x,
 			0,
 			playerSphereParent.transform.rotation.z * 2,
 			playerSphereParent.transform.rotation.w
 			);
+		*/
 		
-		
-		/*this.transform.eulerAngles = new Vector3(
+		this.transform.eulerAngles = new Vector3(
 			playerSphereParent.transform.eulerAngles.x,
 			0,
 			playerSphereParent.transform.eulerAngles.z
 			);
-		*/
+		
 	}
 }

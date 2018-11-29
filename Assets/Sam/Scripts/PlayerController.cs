@@ -33,21 +33,36 @@ public class PlayerController : MonoBehaviour
 	Vector3 PrevPos; 
 	Vector3 NewPos; 
 	Vector3 ObjVelocity;
+
+	private float lastYrot = 0f;
+
+	private ParticleSystem ps;
+	
 	
 	// Use this for initialization
 	void Start ()
 	{
 		thisRB = this.GetComponent<Rigidbody>();
-		bananaText.text = "BANANA ( S )" + "\n000/100";
-		scoreText.text = "SCORE" + "\n    0";
+		bananaText.text = "BANANA: 0/100";
+		scoreText.text = "SCORE: 0";
 		PrevPos = transform.position;
 		NewPos = transform.position;
+
+		ps = this.GetComponent<ParticleSystem>();
+
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
-		speedText.text = Mathf.RoundToInt(Mathf.Abs(ObjVelocity.x + ObjVelocity.z)) + " mph";
+		// sparks
+		var thisEmission = ps.emission;
+		
+		thisEmission.rateOverTime = thisRB.velocity.magnitude * 2;
+		
+		
+		
+		speedText.text = Mathf.RoundToInt(Mathf.Abs(ObjVelocity.x + ObjVelocity.z)) + " MPH";
 		
 		NewPos = transform.position; 
 		ObjVelocity = (NewPos - PrevPos) / Time.fixedDeltaTime;  
@@ -61,12 +76,18 @@ public class PlayerController : MonoBehaviour
 			{
 				horizAccelI += Input.GetAxis("Horizontal") * Time.deltaTime * 13;
 			}
-			else horizAccelI = Mathf.MoveTowards(horizAccelI, 0, Time.deltaTime * 7);	
+			else horizAccelI = Mathf.MoveTowards(horizAccelI, 0, Time.deltaTime * 7);
+
+			lastYrot = this.transform.eulerAngles.y;
+
 		}
 
 		else 	//While stationary player lookRotation is directly controlled (less snappy, better for looking around)
 		{
 			yAngleDir += Input.GetAxis("Horizontal") * Time.deltaTime * 115;
+
+			this.transform.eulerAngles = new Vector3(transform.eulerAngles.x, lastYrot, transform.eulerAngles.z);
+
 		}
 		
 		//*****BELOW IS MANUAL ACCELRATION ON KEY INPUT
@@ -95,10 +116,8 @@ public class PlayerController : MonoBehaviour
 			Destroy(other.gameObject);
 			bananaCount++;
 			scoreCount += 100;
-			string nanners = bananaCount.ToString("000");
-
-			bananaText.text = "BANANA ( S ) " + "\n" + nanners + "/100";
-			scoreText.text = "SCORE " + "\n          " + scoreCount;
+			bananaText.text = "BANANA: " + bananaCount + "/100";
+			scoreText.text = "SCORE: " + scoreCount;
 		}
 		
 		else if (other.gameObject.tag == "KillPlane")
