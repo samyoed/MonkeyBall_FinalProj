@@ -43,8 +43,8 @@ public class PlayerController : MonoBehaviour
 	void Start ()
 	{
 		thisRB = this.GetComponent<Rigidbody>();
-		bananaText.text = "BANANA: 0/100";
-		scoreText.text = "SCORE: 0";
+		bananaText.text = "BANANA ( S )" + "\n000/100";
+		scoreText.text = "SCORE" + "\n    0";
 		PrevPos = transform.position;
 		NewPos = transform.position;
 
@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour
 		
 		
 		
-		speedText.text = Mathf.RoundToInt(Mathf.Abs(ObjVelocity.x + ObjVelocity.z)) + " MPH";
+		speedText.text = Mathf.RoundToInt(Mathf.Abs(ObjVelocity.x + ObjVelocity.z)) + " mph";
 		
 		NewPos = transform.position; 
 		ObjVelocity = (NewPos - PrevPos) / Time.fixedDeltaTime;  
@@ -116,8 +116,10 @@ public class PlayerController : MonoBehaviour
 			Destroy(other.gameObject);
 			bananaCount++;
 			scoreCount += 100;
-			bananaText.text = "BANANA: " + bananaCount + "/100";
-			scoreText.text = "SCORE: " + scoreCount;
+			string nanners = bananaCount.ToString("000");
+			bananaText.text = "BANANA ( S ) " + "\n" + nanners + "/100";
+			scoreText.text = "SCORE " + "\n          " + scoreCount;
+
 		}
 		
 		else if (other.gameObject.tag == "KillPlane")
