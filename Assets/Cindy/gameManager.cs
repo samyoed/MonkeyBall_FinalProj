@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Schema;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -13,36 +14,48 @@ public class gameManager : MonoBehaviour
 	public float timer = 60;
 
 	public Text floorText;
-	public Text timerText;
+	public Text timerSecText;
+	public Text timerFracText;
 	
 	// Use this for initialization
 	void Start () {
 				
 		lifeCounter = 3;
 		floorCounter = 1;
-		floorText.text = "Floor: 1";
+		floorText.text = "Floor 1";
 		StartCountdownTimer();
 
 	}
 
 	void StartCountdownTimer()
 	{
-		if (timerText != null)
+		if (timerSecText != null)
 		{
 			timer = 60;
-			timerText.text = "060:00";
+			timerSecText.text = "060";
 			InvokeRepeating("UpdateTimer", 0.0f, 0.01667f);
+		}
+
+		if (timerFracText != null)
+		{
+			timerFracText.text = "00";
 		}
 	}
 
 	void UpdateTimer()
 	{
-		if (timerText != null)
+		if (timerSecText != null)
 		{
 			timer -= Time.deltaTime;
 			string seconds = (timer % 60).ToString("000");
+			timerSecText.text = seconds;
+			
+		}
+
+		if (timerFracText != null)
+		{
 			string fraction = ((timer * 100) % 100).ToString("00");
-			timerText.text = seconds + ":" + fraction;
+			timerFracText.text = ":" + fraction;
 		}
 	}
 	
@@ -52,7 +65,7 @@ public class gameManager : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.U))
 		{
 			floorCounter++;
-			floorText.text = "Floor: " + floorCounter;
+			floorText.text = "Floor " + floorCounter;
 		}
 
 	
@@ -66,6 +79,11 @@ public class gameManager : MonoBehaviour
 			GetComponent<PlayerController>().scoreCount = 0;
 
 			SceneManager.LoadScene("Main Menu");
+		}
+
+		if (timer <= 0)
+		{
+			SceneManager.LoadScene("Player");
 		}
 
 	}
