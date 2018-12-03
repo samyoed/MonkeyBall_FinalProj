@@ -24,6 +24,7 @@ public class gameManager : MonoBehaviour
 		floorText.text = "Floor: 1";
 		StartCountdownTimer();
 
+		DontDestroyOnLoad(this.gameObject);
 	}
 
 	void StartCountdownTimer()
@@ -64,7 +65,7 @@ public class gameManager : MonoBehaviour
 		if (lifeCounter < 0)
 		{
 			GetComponent<PlayerController>().bananaCount = 0;
-			GetComponent<PlayerController>().scoreCount = 0;
+			//GetComponent<PlayerController>().scoreCount = 0;
 
 			SceneManager.LoadScene("Main Menu");
 		}

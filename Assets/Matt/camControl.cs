@@ -5,6 +5,7 @@ using UnityEngine;
 public class camControl : MonoBehaviour
 {
 	public GameObject player;
+	public GameObject playerAnalogue;
 	
 	public GameObject camTarget;
 	private Transform tarTransform;
@@ -41,8 +42,8 @@ public class camControl : MonoBehaviour
 
 	void followPlayer()
 	{
-			tarPosition = (player.transform.position - playerRB.velocity) + (Vector3.up * 2) -
-			              (player.transform.forward * 2);
+			tarPosition = (playerAnalogue.transform.position - playerRB.velocity) + (Vector3.up * 2) -
+			              (playerAnalogue.transform.forward * 2);
 		
 		//Debug.Log("targetPosition = " + tarPosition);
 

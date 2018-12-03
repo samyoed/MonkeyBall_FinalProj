@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
+	public GameObject playerAnalogue;
+	
 	public float horizDegrees = 0;
 	public float vertDegrees = 0;
 	
@@ -24,6 +26,8 @@ public class PlayerController : MonoBehaviour
 	private bool fading = false;
 	public Graphic screenFadeRect;
 	private float fadeAlpha = 0f;
+
+	public GameObject gameManager;
 	
 	// Use this for initialization
 	void Start ()
@@ -34,15 +38,15 @@ public class PlayerController : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		if (thisRB.velocity.magnitude > 1.5)	//Player yRotation becomes automatic once moving for easier control
+		if (thisRB.velocity.magnitude > 2.1)	//Player yRotation becomes automatic once moving for easier control
 		{
 			SetYRotation();
 			
 			if (Input.GetAxis("Horizontal") != 0 && Mathf.Abs(horizAccelI) < horizMax)
 			{
-				horizAccelI += Input.GetAxis("Horizontal") * Time.deltaTime * 13;
+				horizAccelI += Input.GetAxis("Horizontal") * Time.deltaTime * 50;
 			}
-			else horizAccelI = Mathf.MoveTowards(horizAccelI, 0, Time.deltaTime * 7);	
+			else horizAccelI = Mathf.MoveTowards(horizAccelI, 0, Time.deltaTime * 20);	
 		}
 
 		else 	//While stationary player lookRotation is directly controlled (less snappy, better for looking around)
@@ -53,14 +57,14 @@ public class PlayerController : MonoBehaviour
 		//*****BELOW IS MANUAL ACCELRATION ON KEY INPUT
 		if (Input.GetAxis("Vertical") != 0 && Mathf.Abs(vertAccelI) < vertMax)
 		{
-			vertAccelI += Input.GetAxis("Vertical") * Time.deltaTime * 13;
+			vertAccelI += Input.GetAxis("Vertical") * Time.deltaTime * 50;
 		}
-		else vertAccelI = Mathf.MoveTowards(vertAccelI, 0, Time.deltaTime * 7);
+		else vertAccelI = Mathf.MoveTowards(vertAccelI, 0, Time.deltaTime * 20);
 	
 		
 		//*********************************************
 		
-		transform.eulerAngles = new Vector3(-vertAccelI, yAngleDir, horizAccelI);
+		playerAnalogue.transform.eulerAngles = new Vector3(-vertAccelI, yAngleDir, horizAccelI);
 
 		if (fading)
 		{
