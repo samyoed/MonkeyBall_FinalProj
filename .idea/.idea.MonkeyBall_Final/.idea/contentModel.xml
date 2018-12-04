@@ -8,6 +8,7 @@
       <e p="Assets" t="Include">
         <e p="Matt" t="Include">
           <e p="bananaRotater.cs" t="Include" />
+          <e p="camControl.cs" t="Include" />
         </e>
         <e p="Sam" t="Include">
           <e p="BackdropMove.cs" t="Include" />
@@ -20,6 +21,8 @@
         <e p="Scripts" t="Include">
           <e p="gameManager.cs" t="Include" />
           <e p="pauseMenu.cs" t="Include" />
+          <e p="rayForward.cs" t="Include" />
+          <e p="WorldScript.cs" t="Include" />
         </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />
