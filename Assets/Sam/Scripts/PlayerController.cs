@@ -39,6 +39,8 @@ public class PlayerController : MonoBehaviour
 	private float lastYrot = 0f;
 
 	private ParticleSystem ps;
+
+	public bool GO = false;
 	
 	
 	// Use this for initialization
@@ -58,57 +60,69 @@ public class PlayerController : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		// sparks
-		var thisEmission = ps.emission;
-		
-		thisEmission.rateOverTime = thisRB.velocity.magnitude * 2;
-		
-		
-		
-		speedText.text = Mathf.RoundToInt(Mathf.Abs(ObjVelocity.x + ObjVelocity.z)) * 3 + " mph";
-		
-		NewPos = transform.position; 
-		ObjVelocity = (NewPos - PrevPos) / Time.fixedDeltaTime;  
-		PrevPos = NewPos;  
-		
-		if (thisRB.velocity.magnitude > 1.5)	//Player yRotation becomes automatic once moving for easier control
+		if (GO)
 		{
-			SetYRotation();
-			
-			if (Input.GetAxis("Horizontal") != 0 && Mathf.Abs(horizAccelI) < horizMax)
+			if (thisRB.velocity.magnitude > 3)
 			{
-				horizAccelI += Input.GetAxis("Horizontal") * Time.deltaTime * 13;
+				// sparks
+				var thisEmission = ps.emission;
+
+				thisEmission.rateOverTime = thisRB.velocity.magnitude * 2;
 			}
-			else horizAccelI = Mathf.MoveTowards(horizAccelI, 0, Time.deltaTime * 7);
+			else
+			{
+				var thisEmission = ps.emission;
 
-			lastYrot = this.transform.eulerAngles.y;
+				thisEmission.rateOverTime = 0;
+			}
 
-		}
 
-		else 	//While stationary player lookRotation is directly controlled (less snappy, better for looking around)
-		{
-			yAngleDir += Input.GetAxis("Horizontal") * Time.deltaTime * 115;
 
-			this.transform.eulerAngles = new Vector3(transform.eulerAngles.x, lastYrot, transform.eulerAngles.z);
+			speedText.text = Mathf.RoundToInt(Mathf.Abs(ObjVelocity.x + ObjVelocity.z)) * 3 + " mph";
 
-		}
-		
-		//*****BELOW IS MANUAL ACCELRATION ON KEY INPUT
-		if (Input.GetAxis("Vertical") != 0 && Mathf.Abs(vertAccelI) < vertMax)
-		{
-			vertAccelI += Input.GetAxis("Vertical") * Time.deltaTime * 13;
-		}
-		else vertAccelI = Mathf.MoveTowards(vertAccelI, 0, Time.deltaTime * 7);
-	
-		
-		//*********************************************
-		
-		transform.eulerAngles = new Vector3(-vertAccelI, yAngleDir, horizAccelI);
+			NewPos = transform.position;
+			ObjVelocity = (NewPos - PrevPos) / Time.fixedDeltaTime;
+			PrevPos = NewPos;
 
-		if (fading)
-		{
-			screenFadeRect.color = new Color(255, 255, 255, fadeAlpha);
-			fadeAlpha += Time.deltaTime * .8f;
+			if (thisRB.velocity.magnitude > 1.5) //Player yRotation becomes automatic once moving for easier control
+			{
+				SetYRotation();
+
+				if (Input.GetAxis("Horizontal") != 0 && Mathf.Abs(horizAccelI) < horizMax)
+				{
+					horizAccelI += Input.GetAxis("Horizontal") * Time.deltaTime * 15;
+				}
+				else horizAccelI = Mathf.MoveTowards(horizAccelI, 0, Time.deltaTime * 10);
+
+				lastYrot = this.transform.eulerAngles.y;
+
+			}
+
+			else //While stationary player lookRotation is directly controlled (less snappy, better for looking around)
+			{
+				yAngleDir += Input.GetAxis("Horizontal") * Time.deltaTime * 115;
+
+				this.transform.eulerAngles = new Vector3(transform.eulerAngles.x, lastYrot, transform.eulerAngles.z);
+
+			}
+
+			//*****BELOW IS MANUAL ACCELRATION ON KEY INPUT
+			if (Input.GetAxis("Vertical") != 0 && Mathf.Abs(vertAccelI) < vertMax)
+			{
+				vertAccelI += Input.GetAxis("Vertical") * Time.deltaTime * 15;
+			}
+			else vertAccelI = Mathf.MoveTowards(vertAccelI, 0, Time.deltaTime * 10);
+
+
+			//*********************************************
+
+			transform.eulerAngles = new Vector3(-vertAccelI, yAngleDir, horizAccelI);
+
+			if (fading)
+			{
+				screenFadeRect.color = new Color(255, 255, 255, fadeAlpha);
+				fadeAlpha += Time.deltaTime * .8f;
+			}
 		}
 	}
 	

@@ -842,6 +842,7 @@ MonoBehaviour:
   scoreText: {fileID: 442310664}
   speedText: {fileID: 855122947}
   fallout: {fileID: 1086895821}
+  GO: 0
 --- !u!114 &212038953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -920,7 +921,7 @@ TrailRenderer:
     colorGradient:
       serializedVersion: 2
       key0: {r: 1, g: 1, b: 1, a: 1}
-      key1: {r: 1, g: 1, b: 1, a: 1}
+      key1: {r: 1, g: 1, b: 1, a: 0}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -935,8 +936,8 @@ TrailRenderer:
       ctime5: 0
       ctime6: 0
       ctime7: 0
-      atime0: 0
-      atime1: 65535
+      atime0: 31611
+      atime1: 36237
       atime2: 0
       atime3: 0
       atime4: 0
@@ -1784,7 +1785,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 16.89
+      scalar: 0
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -6123,7 +6124,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &570300096
 MonoBehaviour:
@@ -6140,6 +6141,7 @@ MonoBehaviour:
   floor: {fileID: 1163639560}
   ready: {fileID: 1834174783}
   go: {fileID: 388393149}
+  player: {fileID: 212038946}
 --- !u!1 &642759399
 GameObject:
   m_ObjectHideFlags: 0
@@ -7569,7 +7571,7 @@ RectTransform:
   - {fileID: 1086895820}
   - {fileID: 1656292879}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -9990,7 +9992,7 @@ RectTransform:
   m_GameObject: {fileID: 1656292878}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.4905, z: 1}
   m_Children: []
   m_Father: {fileID: 870078079}
   m_RootOrder: 10
@@ -11042,7 +11044,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &1996358570
 GameObject:
@@ -11189,7 +11191,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2015614016
 GameObject:
