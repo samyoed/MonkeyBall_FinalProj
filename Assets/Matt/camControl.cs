@@ -41,7 +41,7 @@ public class camControl : MonoBehaviour
 
 	void followPlayer()
 	{
-			tarPosition = (player.transform.position - (playerRB.velocity * .4f)) + (Vector3.up * 2) -
+			tarPosition = (player.transform.position - (playerRB.velocity * .25f)) + (Vector3.up * 2) -
 			              (player.transform.forward * 2);
 		
 		//Debug.Log("targetPosition = " + tarPosition);
