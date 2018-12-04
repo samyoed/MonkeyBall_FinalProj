@@ -24,7 +24,14 @@ public class gameManager : MonoBehaviour
 		floorCounter = 1;
 		floorText.text = "Floor 1";
 		StartCountdownTimer();
-
+		Scene currentScene = SceneManager.GetActiveScene ();
+		string sceneName = currentScene.name;
+		
+		if (sceneName == "Player 2")
+		{
+			floorCounter = 2;
+			floorText.text = "Floor " + floorCounter;
+		}
 	}
 
 	void StartCountdownTimer()
@@ -61,13 +68,6 @@ public class gameManager : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
-
-		if (Input.GetKeyDown(KeyCode.U))
-		{
-			floorCounter++;
-			floorText.text = "Floor " + floorCounter;
-		}
-
 	
 		if (Input.GetKeyDown(KeyCode.T))
 		{
@@ -75,9 +75,6 @@ public class gameManager : MonoBehaviour
 		}
 		if (lifeCounter < 0)
 		{
-			GetComponent<PlayerController>().bananaCount = 0;
-			GetComponent<PlayerController>().scoreCount = 0;
-
 			SceneManager.LoadScene("Main Menu");
 		}
 

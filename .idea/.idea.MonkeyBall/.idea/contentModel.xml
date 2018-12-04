@@ -8,6 +8,7 @@
       <e p="Assets" t="Include">
         <e p="Cindy" t="Include">
           <e p="gameManager.cs" t="Include" />
+          <e p="goalScript.cs" t="Include" />
           <e p="killPlain.cs" t="Include" />
           <e p="mainMenu.cs" t="Include" />
           <e p="pauseMenu.cs" t="Include" />
