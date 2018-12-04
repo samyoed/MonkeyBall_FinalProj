@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Net.Mime;
 using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -29,6 +30,7 @@ public class PlayerController : MonoBehaviour
 	public Text bananaText;
 	public Text scoreText;
 	public Text speedText;
+	public Text fallout;
 	
 	Vector3 PrevPos; 
 	Vector3 NewPos; 
@@ -44,7 +46,8 @@ public class PlayerController : MonoBehaviour
 	{
 		thisRB = this.GetComponent<Rigidbody>();
 		bananaText.text = "BANANA ( S )" + "\n000/100";
-		scoreText.text = "SCORE" + "\n    0";
+		scoreText.text = "SCORE" + "\n        0";
+		fallout.color = new Color(0f, 0f, 0f, 0f);
 		PrevPos = transform.position;
 		NewPos = transform.position;
 
@@ -62,7 +65,7 @@ public class PlayerController : MonoBehaviour
 		
 		
 		
-		speedText.text = Mathf.RoundToInt(Mathf.Abs(ObjVelocity.x + ObjVelocity.z)) + " mph";
+		speedText.text = Mathf.RoundToInt(Mathf.Abs(ObjVelocity.x + ObjVelocity.z)) * 3 + " mph";
 		
 		NewPos = transform.position; 
 		ObjVelocity = (NewPos - PrevPos) / Time.fixedDeltaTime;  
@@ -162,6 +165,7 @@ public class PlayerController : MonoBehaviour
 	
 	IEnumerator playerLose()
 	{
+		fallout.color = Color.red;
 		thisRB.drag += 10;
 		yield return new WaitForSeconds(.5f);
 		fading = true;
