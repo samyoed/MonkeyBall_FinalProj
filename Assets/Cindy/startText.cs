@@ -12,6 +12,8 @@ public class startText : MonoBehaviour
 	public Text floor;
 	public Text ready;
 	public Text go;
+
+	public GameObject player;
 	
 	// Use this for initialization
 	void Start ()
@@ -50,6 +52,7 @@ public class startText : MonoBehaviour
 		if (timer > 0 && timer < 1)
 		{
 			go.color = Color.blue;
+			player.GetComponent<PlayerController>().GO = true;
 		}
 		else
 		{
