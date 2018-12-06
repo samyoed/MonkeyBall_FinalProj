@@ -7,6 +7,8 @@ public class scrCameraTween : MonoBehaviour {
     public Transform sphere, cube;
     int GameStart;
 
+	public bool atTarget = false;
+	public GameObject mainCam;
 
     void Start()
     {
@@ -34,5 +36,9 @@ public class scrCameraTween : MonoBehaviour {
         sphere.position += (cube.position - sphere.position) * 0.1f;
         }
 
+		if (Vector3.Distance (this.transform.position, cube.transform.position) < .2f) {
+			mainCam.SetActive (true);
+			//this.gameObject.SetActive (false);
+		}
     }
 }
