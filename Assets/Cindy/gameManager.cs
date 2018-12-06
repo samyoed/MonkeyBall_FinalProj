@@ -16,6 +16,9 @@ public class gameManager : MonoBehaviour
 	public Text floorText;
 	public Text timerSecText;
 	public Text timerFracText;
+
+	public bool startManager = false, GO = false;
+	public GameObject player;
 	
 	// Use this for initialization
 	void Start () {
@@ -23,8 +26,9 @@ public class gameManager : MonoBehaviour
 		lifeCounter = 3;
 		floorCounter = 1;
 		floorText.text = "Floor 1";
-		StartCountdownTimer();
 
+		StartCountdownTimer ();
+		
 	}
 
 	void StartCountdownTimer()
@@ -38,24 +42,24 @@ public class gameManager : MonoBehaviour
 
 		if (timerFracText != null)
 		{
-			timerFracText.text = "00";
+			timerFracText.text = ":00";
 		}
 	}
 
 	void UpdateTimer()
 	{
-		if (timerSecText != null)
-		{
-			timer -= Time.deltaTime;
-			string seconds = (timer % 60).ToString("000");
-			timerSecText.text = seconds;
+		if (player.GetComponent<PlayerController>().GO) {
+			if (timerSecText != null) {
+				timer -= Time.deltaTime;
+				string seconds = (timer % 60).ToString ("000");
+				timerSecText.text = seconds;
 			
-		}
+			}
 
-		if (timerFracText != null)
-		{
-			string fraction = ((timer * 100) % 100).ToString("00");
-			timerFracText.text = ":" + fraction;
+			if (timerFracText != null) {
+				string fraction = ((timer * 100) % 100).ToString ("00");
+				timerFracText.text = ":" + fraction;
+			}
 		}
 	}
 	
