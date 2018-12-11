@@ -9,6 +9,7 @@ public class scrCameraTween : MonoBehaviour {
 
 	public bool atTarget = false;
 	public GameObject mainCam;
+	public GameObject gameManager;
 
     void Start()
     {
@@ -38,6 +39,8 @@ public class scrCameraTween : MonoBehaviour {
 
 		if (Vector3.Distance (this.transform.position, cube.transform.position) < .2f) {
 			mainCam.SetActive (true);
+			gameManager.GetComponent<gameManager> ().startManager = true;
+			gameManager.GetComponent<startText> ().beginIntro = true;
 			//this.gameObject.SetActive (false);
 		}
     }
