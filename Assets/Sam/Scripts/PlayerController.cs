@@ -49,6 +49,7 @@ public class PlayerController : MonoBehaviour
 		thisRB = this.GetComponent<Rigidbody>();
 		bananaText.text = "BANANA ( S )" + "\n000/100";
 		scoreText.text = "SCORE" + "\n        0";
+		speedText.text = "0 mph";
 		fallout.color = new Color(0f, 0f, 0f, 0f);
 		PrevPos = transform.position;
 		NewPos = transform.position;
