@@ -79,8 +79,8 @@ public class gameManager : MonoBehaviour
 		}
 		if (lifeCounter < 0)
 		{
-			GetComponent<PlayerController>().bananaCount = 0;
-			GetComponent<PlayerController>().scoreCount = 0;
+			//GetComponent<PlayerController>().bananaCount = 0;
+			//GetComponent<PlayerController>().scoreCount = 0;
 
 			SceneManager.LoadScene("Main Menu");
 		}
