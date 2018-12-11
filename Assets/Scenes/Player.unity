@@ -6289,6 +6289,9 @@ MonoBehaviour:
   floorText: {fileID: 2070631513}
   timerSecText: {fileID: 1769391970}
   timerFracText: {fileID: 2121016830}
+  startManager: 0
+  GO: 0
+  player: {fileID: 212038946}
 --- !u!4 &570300095
 Transform:
   m_ObjectHideFlags: 0
@@ -6335,7 +6338,11 @@ MonoBehaviour:
   isPaused: 0
 =======
   player: {fileID: 212038946}
+<<<<<<< HEAD
 >>>>>>> 71ea0190014a6d8a7cea03170d63f22102d4e7b3
+=======
+  beginIntro: 0
+>>>>>>> d8e4970894b34a60cc0e5ebc928b1f748fc964d1
 --- !u!1 &642759399
 GameObject:
   m_ObjectHideFlags: 0

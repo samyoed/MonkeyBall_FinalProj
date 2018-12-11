@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="69f5ce07-222b-4e3d-8b79-1841dc36bbbf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MonkeyBall/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MonkeyBall/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cindy/gameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cindy/gameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/Unity3DRider.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/Unity3DRider.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sam/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sam/Scripts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
-    </list>
+    <list default="true" id="69f5ce07-222b-4e3d-8b79-1841dc36bbbf" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +42,7 @@
     <session id="-582601564">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.15" value="2" />
           <entry key="project.open.time.19" value="1" />
@@ -88,7 +79,7 @@
         <entry file="file://$PROJECT_DIR$/Assets/Cindy/gameManager.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
-              <caret line="55" column="5" lean-forward="true" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+              <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
               <folding>
                 <marker date="1544505999888" expanded="false" signature="6:160" ph="..." />
                 <marker date="1544505999888" expanded="true" signature="202:1712" ph="{...}" />
@@ -114,7 +105,7 @@
         <entry file="file://$PROJECT_DIR$/Assets/Sam/Scripts/PlayerController.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="237">
-              <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
+              <caret line="85" selection-start-line="85" selection-end-line="85" />
               <folding>
                 <marker date="1544505982123" expanded="false" signature="6:211" ph="..." />
                 <marker date="1544505982123" expanded="true" signature="258:5161" ph="{...}" />
@@ -266,7 +257,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1455" height="935" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1562724" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -362,7 +352,7 @@
     <entry file="file://$PROJECT_DIR$/Assets/Sam/Scripts/PlayerController.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="237">
-          <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
           <folding>
             <marker date="1544505982123" expanded="false" signature="6:211" ph="..." />
             <marker date="1544505982123" expanded="true" signature="258:5161" ph="{...}" />
@@ -392,7 +382,7 @@
     <entry file="file://$PROJECT_DIR$/Assets/Cindy/gameManager.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="55" column="5" lean-forward="true" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+          <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
           <folding>
             <marker date="1544505999888" expanded="false" signature="6:160" ph="..." />
             <marker date="1544505999888" expanded="true" signature="202:1712" ph="{...}" />

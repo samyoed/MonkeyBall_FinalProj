@@ -107,9 +107,9 @@ public class PlayerController : MonoBehaviour
 
 				if (Input.GetAxis("Horizontal") != 0 && Mathf.Abs(horizAccelI) < horizMax)
 				{
-					horizAccelI += Input.GetAxis("Horizontal") * Time.deltaTime * 15;
+					horizAccelI += Input.GetAxis("Horizontal") * Time.deltaTime * 30;
 				}
-				else horizAccelI = Mathf.MoveTowards(horizAccelI, 0, Time.deltaTime * 10);
+				else horizAccelI = Mathf.MoveTowards(horizAccelI, 0, Time.deltaTime * 25);
 
 				lastYrot = this.transform.eulerAngles.y;
 
