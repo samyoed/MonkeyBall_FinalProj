@@ -26,7 +26,6 @@ public class gameManager : MonoBehaviour
 		lifeCounter = 3;
 		floorCounter = 1;
 		floorText.text = "Floor 1";
-<<<<<<< HEAD
 		StartCountdownTimer();
 		Scene currentScene = SceneManager.GetActiveScene ();
 		string sceneName = currentScene.name;
@@ -36,11 +35,9 @@ public class gameManager : MonoBehaviour
 			floorCounter = 2;
 			floorText.text = "Floor " + floorCounter;
 		}
-=======
 
 		StartCountdownTimer ();
 		
->>>>>>> 71ea0190014a6d8a7cea03170d63f22102d4e7b3
 	}
 
 	void StartCountdownTimer()

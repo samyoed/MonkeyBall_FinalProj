@@ -62,12 +62,11 @@ public class PlayerController : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-<<<<<<< HEAD
 
 		// sparks
-		var thisEmission = ps.emission;
+		var tisEmission = ps.emission;
 		
-		thisEmission.rateOverTime = thisRB.velocity.magnitude * 2;
+		tisEmission.rateOverTime = thisRB.velocity.magnitude * 2;
 		
 		
 		
@@ -78,9 +77,7 @@ public class PlayerController : MonoBehaviour
 		PrevPos = NewPos;  
 		
 		if (thisRB.velocity.magnitude > 1.5)	//Player yRotation becomes automatic once moving for easier control
-=======
 		if (GO)
->>>>>>> 71ea0190014a6d8a7cea03170d63f22102d4e7b3
 		{
 			if (thisRB.velocity.magnitude > 3)
 			{
