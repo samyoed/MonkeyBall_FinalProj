@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="69f5ce07-222b-4e3d-8b79-1841dc36bbbf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MonkeyBall/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MonkeyBall/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cindy/gameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cindy/gameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cindy/mainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cindy/mainMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/Unity3DRider.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/Unity3DRider.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sam/Models/BananaModel.mb.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sam/Models/BananaModel.mb.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sam/Models/Map Model 1.mb.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sam/Models/Map Model 1.mb.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sam/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sam/Scripts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Final_Playtest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Final_Playtest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-    </list>
+    <list default="true" id="69f5ce07-222b-4e3d-8b79-1841dc36bbbf" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +42,7 @@
     <session id="-582601564">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.15" value="2" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.21" value="1" />
@@ -194,7 +181,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="375" />
     <option name="y" value="-15" />
     <option name="width" value="1638" />
@@ -281,8 +268,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1455" height="935" extended-state="7" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1455" height="935" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15412186" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
