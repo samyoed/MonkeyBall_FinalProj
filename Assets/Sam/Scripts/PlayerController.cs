@@ -11,8 +11,8 @@ public class PlayerController : MonoBehaviour
 	public float horizDegrees = 0;
 	public float vertDegrees = 0;
 	
-	public int bananaCount = 0;
-	public int scoreCount = 0;
+	public static int bananaCount;
+	public static int scoreCount;
 
 	private float vertAccelI = 0;
 	public float vertMax = 0;
@@ -53,6 +53,8 @@ public class PlayerController : MonoBehaviour
 		fallout.color = new Color(0f, 0f, 0f, 0f);
 		PrevPos = transform.position;
 		NewPos = transform.position;
+		bananaCount = 0;
+		scoreCount = 0;
 
 		ps = this.GetComponent<ParticleSystem>();
 
@@ -61,6 +63,21 @@ public class PlayerController : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
+
+		// sparks
+		var tisEmission = ps.emission;
+		
+		tisEmission.rateOverTime = thisRB.velocity.magnitude * 2;
+		
+		
+		
+		speedText.text = Mathf.RoundToInt(Mathf.Abs(ObjVelocity.x + ObjVelocity.z)) * 3 + " mph";
+		
+		NewPos = transform.position; 
+		ObjVelocity = (NewPos - PrevPos) / Time.fixedDeltaTime;  
+		PrevPos = NewPos;  
+		
+		if (thisRB.velocity.magnitude > 1.5)	//Player yRotation becomes automatic once moving for easier control
 		if (GO)
 		{
 			if (thisRB.velocity.magnitude > 3)
