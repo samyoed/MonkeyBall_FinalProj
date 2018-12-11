@@ -6211,6 +6211,9 @@ MonoBehaviour:
   floorText: {fileID: 2070631513}
   timerSecText: {fileID: 1769391970}
   timerFracText: {fileID: 2121016830}
+  startManager: 0
+  GO: 0
+  player: {fileID: 212038946}
 --- !u!4 &570300095
 Transform:
   m_ObjectHideFlags: 0
@@ -6240,6 +6243,7 @@ MonoBehaviour:
   ready: {fileID: 1834174783}
   go: {fileID: 388393149}
   player: {fileID: 212038946}
+  beginIntro: 0
 --- !u!1 &642759399
 GameObject:
   m_ObjectHideFlags: 0

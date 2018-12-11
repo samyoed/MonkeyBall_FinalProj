@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 23584020732773402}
   - component: {fileID: 114515892838802028}
   - component: {fileID: 64118123990806082}
+  - component: {fileID: 135462500009220772}
   m_Layer: 0
   m_Name: Banana
   m_TagString: Banana
@@ -111,3 +112,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotSpeed: 200
+--- !u!135 &135462500009220772
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1801144186516344}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2.84
+  m_Center: {x: -1.0621976, y: 0.5899173, z: 0}
