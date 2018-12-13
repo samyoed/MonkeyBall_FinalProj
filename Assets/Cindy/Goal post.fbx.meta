@@ -1,19 +1,58 @@
 fileFormatVersion: 2
-guid: 5ec1b9b68df1dcc429d12e8e589a39db
+guid: a5b3ed93e5fccdb49a3022cefe3dd730
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: group
-    100002: //RootNode
-    100004: pPlane2
-    400000: group
-    400002: //RootNode
-    400004: pPlane2
-    2100000: lambert1
-    2300000: pPlane2
-    3300000: pPlane2
-    4300000: pPlane2
-    2186277476908879412: ImportLogs
+    100000: //RootNode
+    100002: pCylinder1
+    100004: polySurface1
+    100006: polySurface2
+    100008: pPlane1
+    100010: pSphere1
+    100012: pTorus1
+    100014: pTorus2
+    100016: pTorus4
+    100018: pTorus4 1
+    100020: pTorus6
+    100022: transform1
+    100024: transform2
+    100026: transform3
+    100028: transform4
+    100030: transform5
+    100032: transform6
+    400000: //RootNode
+    400002: pCylinder1
+    400004: polySurface1
+    400006: polySurface2
+    400008: pPlane1
+    400010: pSphere1
+    400012: pTorus1
+    400014: pTorus2
+    400016: pTorus4
+    400018: pTorus4 1
+    400020: pTorus6
+    400022: transform1
+    400024: transform2
+    400026: transform3
+    400028: transform4
+    400030: transform5
+    400032: transform6
+    2100000: lambert3
+    2100002: lambert2
+    2100004: lambert1
+    2100006: lambert4
+    2300000: polySurface1
+    2300002: polySurface2
+    2300004: pPlane1
+    2300006: pSphere1
+    3300000: polySurface1
+    3300002: polySurface2
+    3300004: pPlane1
+    3300006: pSphere1
+    4300000: polySurface1
+    4300002: polySurface2
+    4300004: pSphere1
+    4300006: pPlane1
   externalObjects: {}
   materials:
     importMaterials: 1

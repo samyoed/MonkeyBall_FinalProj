@@ -27,7 +27,7 @@ public class gameManager : MonoBehaviour
 				
 		lifeCounter = 3;
 		floorCounter = 1;
-		floorText.text = "Floor 1";
+		floorText.text = "FLOOR 1";
 
 		StartCountdownTimer ();
 		
@@ -78,7 +78,7 @@ public class gameManager : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.U))
 		{
 			floorCounter++;
-			floorText.text = "Floor " + floorCounter;
+			floorText.text = "FLOOR " + floorCounter;
 		}
 
 	
@@ -88,8 +88,8 @@ public class gameManager : MonoBehaviour
 		}
 		if (lifeCounter < 0)
 		{
-			GetComponent<PlayerController>().bananaCount = 0;
-			GetComponent<PlayerController>().scoreCount = 0;
+			//GetComponent<PlayerController>().bananaCount = 0;
+			//GetComponent<PlayerController>().scoreCount = 0;
 
 			SceneManager.LoadScene("Main Menu");
 		}
