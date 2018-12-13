@@ -11,8 +11,8 @@ public class PlayerController : MonoBehaviour
 	public float horizDegrees = 0;
 	public float vertDegrees = 0;
 	
-	public int bananaCount = 0;
-	public int scoreCount = 0;
+	public static int bananaCount;
+	public static int scoreCount;
 
 	private float vertAccelI = 0;
 	public float vertMax = 0;
@@ -49,9 +49,12 @@ public class PlayerController : MonoBehaviour
 		thisRB = this.GetComponent<Rigidbody>();
 		bananaText.text = "BANANA ( S )" + "\n000/100";
 		scoreText.text = "SCORE" + "\n        0";
+		speedText.text = "0 mph";
 		fallout.color = new Color(0f, 0f, 0f, 0f);
 		PrevPos = transform.position;
 		NewPos = transform.position;
+		bananaCount = 0;
+		scoreCount = 0;
 
 		ps = this.GetComponent<ParticleSystem>();
 
@@ -60,6 +63,21 @@ public class PlayerController : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
+
+		// sparks
+		var tisEmission = ps.emission;
+		
+		tisEmission.rateOverTime = thisRB.velocity.magnitude * 2;
+		
+		
+		
+		speedText.text = Mathf.RoundToInt(Mathf.Abs(ObjVelocity.x + ObjVelocity.z)) * 3 + " mph";
+		
+		NewPos = transform.position; 
+		ObjVelocity = (NewPos - PrevPos) / Time.fixedDeltaTime;  
+		PrevPos = NewPos;  
+		
+		if (thisRB.velocity.magnitude > 1.5)	//Player yRotation becomes automatic once moving for easier control
 		if (GO)
 		{
 			if (thisRB.velocity.magnitude > 3)
@@ -90,9 +108,9 @@ public class PlayerController : MonoBehaviour
 
 				if (Input.GetAxis("Horizontal") != 0 && Mathf.Abs(horizAccelI) < horizMax)
 				{
-					horizAccelI += Input.GetAxis("Horizontal") * Time.deltaTime * 15;
+					horizAccelI += Input.GetAxis("Horizontal") * Time.deltaTime * 30;
 				}
-				else horizAccelI = Mathf.MoveTowards(horizAccelI, 0, Time.deltaTime * 10);
+				else horizAccelI = Mathf.MoveTowards(horizAccelI, 0, Time.deltaTime * 25);
 
 				lastYrot = this.transform.eulerAngles.y;
 
@@ -176,11 +194,26 @@ public class PlayerController : MonoBehaviour
 				);*/
 		}
 	}
+
+	public void timeOutParentFunction ()	{
+		StartCoroutine (playerTimeOut ());
+	}
 	
 	IEnumerator playerLose()
 	{
 		fallout.color = Color.red;
 		thisRB.drag += 10;
+		yield return new WaitForSeconds(.5f);
+		fading = true;
+		Debug.Log("beginFadeOut");
+		yield return new WaitForSeconds(2f);
+		SceneManager.LoadScene("Player");
+	}
+
+	IEnumerator playerTimeOut()	{
+		fallout.color = Color.red;
+		fallout.text = "TIME OVER";
+		thisRB.drag += 2;
 		yield return new WaitForSeconds(.5f);
 		fading = true;
 		Debug.Log("beginFadeOut");
