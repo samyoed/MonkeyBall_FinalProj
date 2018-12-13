@@ -19,6 +19,8 @@ public class gameManager : MonoBehaviour
 
 	public bool startManager = false, GO = false;
 	public GameObject player;
+
+	private bool timeOutStarted = false;
 	
 	// Use this for initialization
 	void Start () {
@@ -48,7 +50,7 @@ public class gameManager : MonoBehaviour
 
 	void UpdateTimer()
 	{
-		if (player.GetComponent<PlayerController>().GO) {
+		if (player.GetComponent<PlayerController>().GO && timer > 0) {
 			if (timerSecText != null) {
 				timer -= Time.deltaTime;
 				string seconds = (timer % 60).ToString ("000");
@@ -60,6 +62,13 @@ public class gameManager : MonoBehaviour
 				string fraction = ((timer * 100) % 100).ToString ("00");
 				timerFracText.text = ":" + fraction;
 			}
+		}
+
+		if (timer <= 0 && !timeOutStarted) {
+			player.GetComponent<PlayerController> ().timeOutParentFunction();
+			timeOutStarted = true;
+			timer = 0f;
+			timerFracText.text = ":00";
 		}
 	}
 	
@@ -84,12 +93,5 @@ public class gameManager : MonoBehaviour
 
 			SceneManager.LoadScene("Main Menu");
 		}
-
-		if (timer <= 0)
-		{
-			SceneManager.LoadScene("Player");
-		}
-
 	}
-
 }

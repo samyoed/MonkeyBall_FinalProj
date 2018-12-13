@@ -176,11 +176,26 @@ public class PlayerController : MonoBehaviour
 				);*/
 		}
 	}
+
+	public void timeOutParentFunction ()	{
+		StartCoroutine (playerTimeOut ());
+	}
 	
 	IEnumerator playerLose()
 	{
 		fallout.color = Color.red;
 		thisRB.drag += 10;
+		yield return new WaitForSeconds(.5f);
+		fading = true;
+		Debug.Log("beginFadeOut");
+		yield return new WaitForSeconds(2f);
+		SceneManager.LoadScene("Player");
+	}
+
+	IEnumerator playerTimeOut()	{
+		fallout.color = Color.red;
+		fallout.text = "TIME OVER";
+		thisRB.drag += 2;
 		yield return new WaitForSeconds(.5f);
 		fading = true;
 		Debug.Log("beginFadeOut");
