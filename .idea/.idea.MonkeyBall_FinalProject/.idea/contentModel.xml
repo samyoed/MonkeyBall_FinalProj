@@ -6,6 +6,12 @@
     <e p="C:\Users\humme\Documents\Unity Projects\MonkeyBall_FinalProject" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Brendy" t="Include">
+          <e p="scrCameraSpin.cs" t="Include" />
+          <e p="scrCameraTiltUp.cs" t="Include" />
+          <e p="scrCameraTween.cs" t="Include" />
+          <e p="scrTimeKeeper.cs" t="Include" />
+        </e>
         <e p="Cindy" t="Include">
           <e p="gameManager.cs" t="Include" />
           <e p="killPlain.cs" t="Include" />
@@ -16,6 +22,7 @@
           <e p="WorldScript.cs" t="Include" />
         </e>
         <e p="GravRotation.cs" t="Include" />
+        <e p="MapSpin.cs" t="Include" />
         <e p="Matt" t="Include">
           <e p="bananaRotater.cs" t="Include" />
           <e p="camControl.cs" t="Include" />
