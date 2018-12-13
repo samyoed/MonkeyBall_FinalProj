@@ -15,6 +15,6 @@ public class bananaRotater : MonoBehaviour {
 
 	void RotateInPlace()
 	{
-		transform.Rotate(0, rotSpeed * Time.deltaTime, 0);
+		transform.Rotate(0, rotSpeed * Time.deltaTime, 0, Space.World);
 	}
 }

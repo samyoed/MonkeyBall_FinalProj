@@ -14,19 +14,39 @@ public class WorldScript : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
-		/*this.transform.rotation = new Quaternion(
-			playerSphereParent.transform.rotation.x,
-			0,
-			playerSphereParent.transform.rotation.z * 2,
-			playerSphereParent.transform.rotation.w
-			);
-		*/
-		
-		this.transform.eulerAngles = new Vector3(
-			playerSphereParent.transform.eulerAngles.x,
-			0,
-			playerSphereParent.transform.eulerAngles.z
-			);
-		
-	}
+
+		if (playerSphereParent.GetComponent<PlayerController>().GO)
+		{
+			if (Mathf.Abs(this.transform.rotation.y) < .5f)
+			{
+				this.transform.rotation = new Quaternion(
+					playerSphereParent.transform.rotation.x,
+					0,
+					playerSphereParent.transform.rotation.z * 2,
+					playerSphereParent.transform.rotation.w
+				);
+
+				Debug.Log("rotX < 0");
+			}
+			else
+			{
+				this.transform.rotation = new Quaternion(
+					playerSphereParent.transform.rotation.x,
+					0,
+					0,
+					playerSphereParent.transform.rotation.w
+				);
+
+				Debug.Log("rotX >= 0");
+			}
+		}
+
+/*this.transform.eulerAngles = new Vector3(
+	playerSphereParent.transform.eulerAngles.x,
+	0,
+	playerSphereParent.transform.eulerAngles.z
+	);
+	*/
+
+}
 }
