@@ -17,11 +17,15 @@ public class startText : MonoBehaviour
 
 	public bool beginIntro = false;
 	private bool lastBeginIntro = false;
+
+	public AudioSource thisSource;
+	public AudioClip readyClip, goClip;
+	private bool readyPlayed = false, goPlayed = false;
 	
 	// Use this for initialization
 	void Start ()
 	{
-
+		thisSource = this.GetComponent<AudioSource> ();
 	}
 	
 	// Update is called once per frame
@@ -44,6 +48,13 @@ public class startText : MonoBehaviour
 
 			if (timer > 1 && timer < 2) {
 				ready.color = Color.red;
+
+				if (!readyPlayed) {
+					thisSource.PlayOneShot (readyClip);
+					readyPlayed = true;
+					Debug.Log ("readyClip");
+				}
+
 			} else {
 				ready.color = new Color (0f, 0f, 0f, 0f);
 
@@ -52,6 +63,13 @@ public class startText : MonoBehaviour
 			if (timer > 0 && timer < 1) {
 				go.color = Color.blue;
 				player.GetComponent<PlayerController> ().GO = true;
+
+				if (!goPlayed) {
+					thisSource.PlayOneShot (goClip);
+					goPlayed = true;
+					Debug.Log ("goClip");
+				}
+
 			} else {
 				go.color = new Color (0f, 0f, 0f, 0f);
 

@@ -187,11 +187,11 @@ public class PlayerController : MonoBehaviour
 			yAngleDir = -currentVeloDir + 90;
 			camTarget.transform.eulerAngles = new Vector3(this.transform.eulerAngles.x, yAngleDir, this.transform.eulerAngles.z);
 			
-			/*this.transform.eulerAngles = Vector3.MoveTowards(
+			this.transform.eulerAngles = Vector3.MoveTowards(
 					this.transform.eulerAngles,
 					new Vector3(this.transform.eulerAngles.x, currentVeloDir, this.transform.eulerAngles.z), 
 					Time.deltaTime * 18
-				);*/
+				);
 		}
 	}
 
