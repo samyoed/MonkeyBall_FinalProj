@@ -7,7 +7,7 @@ public class scrCameraSpin : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		transform.Translate(0f, Time.deltaTime * 860, 0f);
+		//transform.Translate(0f, Time.deltaTime * 860, 0f);
 	}
 	
 	// Update is called once per frame
