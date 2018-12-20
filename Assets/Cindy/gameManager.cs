@@ -19,6 +19,7 @@ public class gameManager : MonoBehaviour
 
 	public bool startManager = false, GO = false;
 	public GameObject player;
+	public Image bomb;
 
 	private bool timeOutStarted = false;
 	
@@ -74,6 +75,7 @@ public class gameManager : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
+		BombTicker ();
 
 		if (Input.GetKeyDown(KeyCode.U))
 		{
@@ -92,6 +94,12 @@ public class gameManager : MonoBehaviour
 			//GetComponent<PlayerController>().scoreCount = 0;
 
 			SceneManager.LoadScene("Main Menu");
+		}
+	}
+
+	void BombTicker()	{
+		if (timer < 42) {
+			bomb.fillAmount = (timer + 18f) / 60f;
 		}
 	}
 }
