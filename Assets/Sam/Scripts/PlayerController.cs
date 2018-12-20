@@ -142,6 +142,9 @@ public class PlayerController : MonoBehaviour
 				fadeAlpha += Time.deltaTime * .8f;
 			}
 		}
+
+		//Debug.Log ("HInput = " + Input.GetAxis ("Horizontal"));
+		//Debug.Log ("VInput = " + Input.GetAxis ("Vertical"));
 	}
 	
 	private void OnTriggerEnter(Collider other)

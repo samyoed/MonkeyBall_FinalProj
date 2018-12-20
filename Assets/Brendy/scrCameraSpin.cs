@@ -7,7 +7,7 @@ public class scrCameraSpin : MonoBehaviour {
 	
 	// Use this for initialization
 	void Awake () {
-		transform.position = new Vector3 (-.18f, 20.58f, -6.33f);
+		transform.position = new Vector3 (-.18f, 21.58f, -3.33f);
 	}
 	
 	// Update is called once per frame
