@@ -6,8 +6,8 @@ public class scrCameraSpin : MonoBehaviour {
 	int spin = 360;
 	
 	// Use this for initialization
-	void Start () {
-		//transform.Translate(0f, Time.deltaTime * 860, 0f);
+	void Awake () {
+		transform.position = new Vector3 (-.18f, 20.58f, -6.33f);
 	}
 	
 	// Update is called once per frame
