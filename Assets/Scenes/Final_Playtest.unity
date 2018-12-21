@@ -2990,6 +2990,11 @@ Prefab:
       propertyPath: playerSphereParent
       value: 
       objectReference: {fileID: 1151170813}
+    - target: {fileID: 114636094002956876, guid: d5810ba46026ec6418bd15237dc0f597,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5810ba46026ec6418bd15237dc0f597, type: 2}
   m_IsPrefabAsset: 0
