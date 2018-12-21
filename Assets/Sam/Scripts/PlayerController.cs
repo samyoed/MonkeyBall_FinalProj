@@ -210,7 +210,7 @@ public class PlayerController : MonoBehaviour
 		fading = true;
 		Debug.Log("beginFadeOut");
 		yield return new WaitForSeconds(2f);
-		SceneManager.LoadScene("Player");
+		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 	}
 
 	IEnumerator playerTimeOut()	{
@@ -221,6 +221,6 @@ public class PlayerController : MonoBehaviour
 		fading = true;
 		Debug.Log("beginFadeOut");
 		yield return new WaitForSeconds(2f);
-		SceneManager.LoadScene("Player");
+		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 	}
 }

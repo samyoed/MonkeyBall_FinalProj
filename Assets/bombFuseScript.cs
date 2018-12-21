@@ -44,16 +44,16 @@ public class bombFuseScript : MonoBehaviour {
 
 	void moveTowardsWaypoint ()	{
 		if (gameManager.GetComponent<gameManager> ().timer > turnTime [1]) {
-			this.GetComponent<RectTransform> ().localPosition -= Vector3.right * Time.deltaTime * 9.3f;
+			this.GetComponent<RectTransform> ().localPosition -= Vector3.right * Time.deltaTime * 7.8f;
 		}
 		else if (gameManager.GetComponent<gameManager> ().timer > turnTime [0]) {
-			this.GetComponent<RectTransform> ().localPosition -= Vector3.right * Time.deltaTime * 8.7f;
-			this.GetComponent<RectTransform> ().localPosition += Vector3.up * Time.deltaTime * 7.5f;
+			this.GetComponent<RectTransform> ().localPosition -= Vector3.right * Time.deltaTime * 7.5f;
+			this.GetComponent<RectTransform> ().localPosition += Vector3.up * Time.deltaTime * 6.7f;
 			currentWaypointTarget = 1;
 		}
 		else if (gameManager.GetComponent<gameManager> ().timer < turnTime [0]) {
-			this.GetComponent<RectTransform> ().localPosition -= Vector3.right * Time.deltaTime * 8.8f;
-			this.GetComponent<RectTransform> ().localPosition -= Vector3.up * Time.deltaTime * 8;
+			this.GetComponent<RectTransform> ().localPosition -= Vector3.right * Time.deltaTime * 7.6f;
+			this.GetComponent<RectTransform> ().localPosition -= Vector3.up * Time.deltaTime * 6.9f;
 			currentWaypointTarget = 2;
 		}
 	}
