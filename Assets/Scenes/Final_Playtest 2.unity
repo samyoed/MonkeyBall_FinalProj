@@ -232,6 +232,9 @@ MonoBehaviour:
   go: {fileID: 1557683033}
   player: {fileID: 1151170813}
   beginIntro: 0
+  thisSource: {fileID: 0}
+  readyClip: {fileID: 0}
+  goClip: {fileID: 0}
 --- !u!114 &3982722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,6 +253,7 @@ MonoBehaviour:
   startManager: 0
   GO: 0
   player: {fileID: 1151170813}
+  bomb: {fileID: 0}
 --- !u!4 &3982723
 Transform:
   m_ObjectHideFlags: 0
@@ -2200,7 +2204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 145b1e17abdcc3a44852e49a217431de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotSpeed: 15
+  rotSpeed: 10
 --- !u!4 &692599091
 Transform:
   m_ObjectHideFlags: 0
