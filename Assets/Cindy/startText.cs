@@ -52,7 +52,7 @@ public class startText : MonoBehaviour
 				if (!readyPlayed) {
 					thisSource.PlayOneShot (readyClip);
 					readyPlayed = true;
-					Debug.Log ("readyClip");
+					//Debug.Log ("readyClip");
 				}
 
 			} else {
@@ -67,7 +67,7 @@ public class startText : MonoBehaviour
 				if (!goPlayed) {
 					thisSource.PlayOneShot (goClip);
 					goPlayed = true;
-					Debug.Log ("goClip");
+					//Debug.Log ("goClip");
 				}
 
 			} else {

@@ -79,15 +79,12 @@ public class PlayerController : MonoBehaviour
 		NewPos = transform.position; 
 		ObjVelocity = (NewPos - PrevPos) / Time.fixedDeltaTime;  
 		PrevPos = NewPos;  
-		
-		if (thisRB.velocity.magnitude > 1.5)	//Player yRotation becomes automatic once moving for easier control
-		if (END) {
-			tisEmission.rateOverTime = 50f;
-			Physics.gravity = Vector3.up * -2f;
-		}
 
-		else if (GO)
+		if (GO)
 		{
+			Debug.Log ("HInput = " + Input.GetAxis ("Horizontal"));
+			Debug.Log ("VInput = " + Input.GetAxis ("Vertical"));
+
 			if (thisRB.velocity.magnitude > 3)
 			{
 				// sparks
@@ -101,14 +98,6 @@ public class PlayerController : MonoBehaviour
 
 				thisEmission.rateOverTime = 0;
 			}
-
-
-
-			speedText.text = Mathf.RoundToInt(Mathf.Abs(ObjVelocity.x + ObjVelocity.z)) * 3 + " mph";
-
-			NewPos = transform.position;
-			ObjVelocity = (NewPos - PrevPos) / Time.fixedDeltaTime;
-			PrevPos = NewPos;
 
 			if (thisRB.velocity.magnitude > 1.5) //Player yRotation becomes automatic once moving for easier control
 			{
@@ -135,6 +124,8 @@ public class PlayerController : MonoBehaviour
 			//*****BELOW IS MANUAL ACCELRATION ON KEY INPUT
 			if (Input.GetAxis("Vertical") != 0 && Mathf.Abs(vertAccelI) < vertMax)
 			{
+				Debug.Log ("VInput = " + Input.GetAxis ("Vertical"));
+
 				vertAccelI += Input.GetAxis("Vertical") * Time.deltaTime * 15;
 			}
 			else vertAccelI = Mathf.MoveTowards(vertAccelI, 0, Time.deltaTime * 10);
@@ -150,9 +141,6 @@ public class PlayerController : MonoBehaviour
 			screenFadeRect.color = new Color(255, 255, 255, fadeAlpha);
 			fadeAlpha += Time.deltaTime * .8f;
 		}
-
-		//Debug.Log ("HInput = " + Input.GetAxis ("Horizontal"));
-		//Debug.Log ("VInput = " + Input.GetAxis ("Vertical"));
 	}
 	
 	private void OnTriggerEnter(Collider other)
