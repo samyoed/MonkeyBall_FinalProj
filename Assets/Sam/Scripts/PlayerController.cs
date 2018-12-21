@@ -43,6 +43,8 @@ public class PlayerController : MonoBehaviour
 	public bool GO = false;
 	public bool END = false;
 	public GameObject gravController;
+	public GameObject bananaParent;
+	public AudioClip bananaSound;
 	
 	// Use this for initialization
 	void Start ()
@@ -162,6 +164,8 @@ public class PlayerController : MonoBehaviour
 			string nanners = bananaCount.ToString ("000");
 			bananaText.text = "BANANA ( S ) " + "\n" + nanners + "/100";
 			scoreText.text = "SCORE " + "\n          " + scoreCount;
+			bananaParent.GetComponent<AudioSource> ().PlayOneShot (bananaSound);
+
 
 		} else if (other.gameObject.tag == "KillPlane") {
 			StartCoroutine (playerLose ());
