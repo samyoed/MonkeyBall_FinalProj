@@ -7,13 +7,21 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Brendy" t="Include">
+          <e p="Models" t="Include">
+            <e p="New UIElements View.uxml" t="Include" />
+          </e>
           <e p="scrCameraSpin.cs" t="Include" />
           <e p="scrCameraTiltUp.cs" t="Include" />
           <e p="scrCameraTween.cs" t="Include" />
+          <e p="scrSelfDestroy.cs" t="Include" />
           <e p="scrTimeKeeper.cs" t="Include" />
+          <e p="Sounds" t="Include">
+            <e p="scrReadyGo.cs" t="Include" />
+          </e>
         </e>
         <e p="Cindy" t="Include">
           <e p="gameManager.cs" t="Include" />
+          <e p="goalScript.cs" t="Include" />
           <e p="killPlain.cs" t="Include" />
           <e p="mainMenu.cs" t="Include" />
           <e p="pauseMenu.cs" t="Include" />
