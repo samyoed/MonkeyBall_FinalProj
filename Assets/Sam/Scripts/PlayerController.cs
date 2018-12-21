@@ -141,12 +141,12 @@ public class PlayerController : MonoBehaviour
 			//*********************************************
 
 			transform.eulerAngles = new Vector3(-vertAccelI, yAngleDir, horizAccelI);
+		}
 
-			if (fading)
-			{
-				screenFadeRect.color = new Color(255, 255, 255, fadeAlpha);
-				fadeAlpha += Time.deltaTime * .8f;
-			}
+		if (fading)
+		{
+			screenFadeRect.color = new Color(255, 255, 255, fadeAlpha);
+			fadeAlpha += Time.deltaTime * .8f;
 		}
 
 		//Debug.Log ("HInput = " + Input.GetAxis ("Horizontal"));
@@ -168,9 +168,8 @@ public class PlayerController : MonoBehaviour
 			Debug.Log ("killPlane");
 
 		} else if (other.gameObject.tag == "WinRibbon") {
-			END = true;
-			gravController.SetActive (false);
 			Destroy (other.gameObject);
+			StartCoroutine (endLevel ());
 			Debug.Log ("Levelcomplete");
 		}
 	}
@@ -230,5 +229,25 @@ public class PlayerController : MonoBehaviour
 		Debug.Log("beginFadeOut");
 		yield return new WaitForSeconds(2f);
 		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+	}
+
+	IEnumerator endLevel ()	{
+		END = true;
+		gravController.SetActive (false);
+
+		fallout.color = Color.red;
+		fallout.text = "FINISH!";
+		thisRB.drag += 2;
+		yield return new WaitForSeconds(.5f);
+		fading = true;
+		Debug.Log("beginFadeOut");
+		yield return new WaitForSeconds(2f);
+
+		if (SceneManager.GetActiveScene ().name == "Final_Playtest") {
+			SceneManager.LoadScene ("Final_Playtest 2");
+		}
+		if (SceneManager.GetActiveScene ().name == "Final_Playtest 2") {
+			SceneManager.LoadScene ("Credits");
+		}
 	}
 }
