@@ -41,7 +41,8 @@ public class PlayerController : MonoBehaviour
 	private ParticleSystem ps;
 
 	public bool GO = false;
-	
+	public bool END = false;
+	public GameObject gravController;
 	
 	// Use this for initialization
 	void Start ()
@@ -78,7 +79,12 @@ public class PlayerController : MonoBehaviour
 		PrevPos = NewPos;  
 		
 		if (thisRB.velocity.magnitude > 1.5)	//Player yRotation becomes automatic once moving for easier control
-		if (GO)
+		if (END) {
+			tisEmission.rateOverTime = 50f;
+			Physics.gravity = Vector3.up * -2f;
+		}
+
+		else if (GO)
 		{
 			if (thisRB.velocity.magnitude > 3)
 			{
@@ -149,21 +155,23 @@ public class PlayerController : MonoBehaviour
 	
 	private void OnTriggerEnter(Collider other)
 	{
-		if (other.gameObject.tag == "Banana")
-		{
-			Destroy(other.gameObject);
+		if (other.gameObject.tag == "Banana") {
+			Destroy (other.gameObject);
 			bananaCount++;
 			scoreCount += 100;
-			string nanners = bananaCount.ToString("000");
+			string nanners = bananaCount.ToString ("000");
 			bananaText.text = "BANANA ( S ) " + "\n" + nanners + "/100";
 			scoreText.text = "SCORE " + "\n          " + scoreCount;
 
-		}
-		
-		else if (other.gameObject.tag == "KillPlane")
-		{
-			StartCoroutine(playerLose());
-			Debug.Log("killPlane");
+		} else if (other.gameObject.tag == "KillPlane") {
+			StartCoroutine (playerLose ());
+			Debug.Log ("killPlane");
+
+		} else if (other.gameObject.tag == "WinRibbon") {
+			END = true;
+			gravController.SetActive (false);
+			Destroy (other.gameObject);
+			Debug.Log ("Levelcomplete");
 		}
 	}
 
